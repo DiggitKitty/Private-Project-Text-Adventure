@@ -46,10 +46,32 @@ public class CharacterEditor {
 
             // Hier kannst du die Logik zum Speichern oder Weiterverarbeiten der Daten einfügen
             System.out.println("Charakter erstellt: " + name + ", " + gender + ", " + race + ", " + characterClass);
+
+            showStoryWindow(name, gender, race, characterClass);
         });
         panel.add(saveButton);
 
         frame.add(panel);
         frame.setVisible(true);
-    }
+}
+// Methode zum Anzeigen der Geschichte
+private void showStoryWindow(String name, Gender gender, Race race, Class characterClass) {
+    JFrame storyFrame = new JFrame("Deine Geschichte");
+    storyFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    storyFrame.setSize(400, 300);
+
+    JTextArea storyArea = new JTextArea();
+    storyArea.setEditable(false);
+    storyArea.setText(createStory(name, gender, race, characterClass));
+
+    storyFrame.add(new JScrollPane(storyArea));
+    storyFrame.setVisible(true);
+}
+
+// Methode zur Erstellung der Geschichte
+private String createStory(String name, Gender gender, Race race, Class characterClass) {
+    return "Es ist nachts und eine dunkel gekleidete Person, der Rasse " + race.toString().toLowerCase() + " namens " + name + " schleicht durch die Lande.\n" +
+            "Diese Person scheint dem Geschlecht " + gender.toString().toLowerCase() + " zugehörig zu sein. Die Kampfkünste sind der Klasse eines " + characterClass.toString().toLowerCase() + ".\n" +
+            "Die Geschichte um diese Person beginnt in den Wäldern um Baldurs Gate.";
+}
 }
