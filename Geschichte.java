@@ -18,18 +18,20 @@ public class Geschichte {
 
     public String baldursGate() {
         return "Du entscheidest dich für den Trubel der Großstadt und dort vielleicht den ein oder anderen lukrativen Auftrag an Land zu ziehen.\n" +
-                "In Baldurs Gate angekommen, siehst du viele geschäftige Menschen und hörst von einem geheimnisvollen Auftrag indem es darum geht die Tochter eines Adligen aus einem umliegenden Räubernest zu befreien.";
+                "In Baldurs Gate angekommen, siehst du viele geschäftige Menschen und hörst von einem geheimnisvollen Auftrag, bei dem es darum geht, die Tochter eines Adligen aus einem umliegenden Räubernest zu befreien.";
     }
 
-    // Weitere Methoden für die Fortsetzung der Geschichte
     public String geheimePfadErforschen() {
-        return "Du erblickst einen Tempel, kannst aber nicht ausmachen wer hier verehrt wurde. Du entscheidest dich diesen zu betreten.";
+        return "Du erblickst einen Tempel, kannst aber nicht ausmachen, wer hier verehrt wurde. Du entscheidest dich, diesen zu betreten.";
     }
 
     public String auftragAnnehmen() {
         return "Du nimmst den Auftrag an, denn er scheint ziemlich lukrativ zu sein, " +
                 "da der Vater eine beachtliche Menge für die Rettung seiner Tochter springen lässt.";
     }
+
+    public String stadtRumschlendern() {
+        return "Du entscheidest dich, in der Stadt zu rumschlendern.\n" +
+                "Während du durch die Straßen schlenderst, entdeckst du verschiedene Geschäfte und lauscht den Gesprächen der Stadtbewohner.";
+    }
 }
-
-
